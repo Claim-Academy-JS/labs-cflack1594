@@ -245,11 +245,10 @@ const getNames = function(userData) {
   for (let i = 0; i < userData.length; i++) {
     const { name, username } = users[i];
 
-    console.log(`
-    ID: ${i + 1}
-    Name: ${name}
-    Username: ${username}`);
+    userNames.push({ name, username });
   }
+
+  return userNames;
 };
 
-getNames(users);
+console.log(getNames(users));
