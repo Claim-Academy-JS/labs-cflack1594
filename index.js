@@ -4,7 +4,7 @@
     Loop over this array and use destructuring to extract the name and username
     Log out the name and username
 
-
+    Get total number of characters for all of the usernames
 */
 
 const users = [
@@ -251,4 +251,17 @@ const getNames = function(userData) {
   return userNames;
 };
 
+const getUsernameLength = function(nameList) {
+  let totalLength = 0;
+
+  for (let i = 0; i < users.length; i++) {
+    const { username } = nameList[i];
+    totalLength += username.length;
+  }
+
+  return totalLength;
+};
+
 console.log(getNames(users));
+
+console.log(getUsernameLength(getNames(users)));
