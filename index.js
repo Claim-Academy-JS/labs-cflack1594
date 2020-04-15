@@ -262,6 +262,8 @@ const getUsernameLength = function(nameList) {
   return totalLength;
 };
 
-console.log(getNames(users));
+const namesArr = getNames(users);
+const uNamesLength = getUsernameLength(namesArr);
 
-console.log(getUsernameLength(getNames(users)));
+console.log(namesArr);
+console.log(`Total length of all usernames: ${uNamesLength} characters`);
