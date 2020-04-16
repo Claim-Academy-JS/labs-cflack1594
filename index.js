@@ -8,11 +8,12 @@
 */
 
 // Sum the numbers in this ARRAY.
-const nums = [51, 22, 33, 44, 511, 65, 7, 8, 9, 10];
+const nums = [51, 22, 33, 44, 511, 65, 7, 8, 9, "WOHOO"];
 let nonNumCount = 0;
 
 function sumDaNumbers(nums) {
   let total = 0;
+  nonNumCount = 0;
 
   for (let i = 0; i < nums.length; i++) {
     if (typeof nums[i] === "number") {
