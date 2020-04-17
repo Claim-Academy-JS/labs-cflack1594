@@ -12,4 +12,4 @@ function msToDays(ms) {
 const birthday = "April 29 1999";
 const daysOld = numberOfDaysOld(birthday);
 
-console.log(`You are ${daysOld} days old`);
+console.log(`You are ${daysOld.toFixed(0)} days old`);
