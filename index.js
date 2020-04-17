@@ -7,8 +7,8 @@ function countVowels(wordIn) {
   let vowelCount = 0;
   wordIn = wordIn.toLowerCase();
 
-  for (let i in longWord) {
-    if (vowels.includes(longWord.charAt(i))) vowelCount++;
+  for (let i in wordIn) {
+    if (vowels.includes(wordIn.charAt(i))) vowelCount++;
   }
 
   return `${wordIn} has ${vowelCount} vowels`;
