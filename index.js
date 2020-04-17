@@ -1,24 +1,30 @@
-//take birthday and calculate age in years
-function numberOfDaysOld(birthday) {
-  const bday = new Date(birthday);
-  const now = new Date(Date.now());
-  return msToDays(now - Date.parse(bday));
+const longWord = new String("antidisestablishmentarianism");
+const shortWord = new String("janky");
+const palWord = new String("Racecar");
+const vowels = ["a", "e", "i", "o", "u"];
+
+function countVowels(wordIn) {
+  let vowelCount = 0;
+  wordIn = wordIn.toLowerCase();
+
+  for (let i in longWord) {
+    if (vowels.includes(longWord.charAt(i))) vowelCount++;
+  }
+
+  return `${wordIn} has ${vowelCount} vowels`;
 }
 
-function calcYearsOld(dob) {
-  const dobDate = new Date(dob);
-  const nowDate = new Date();
+function palindrome(wordIn) {
+  wordIn = wordIn.toLowerCase();
 
-  return nowDate.getFullYear() - dobDate.getFullYear();
+  for (let i = 0; i < wordIn.length; i++) {
+    if (!(wordIn.charAt(i) === wordIn.charAt(wordIn.length - 1 - i)))
+      return `${wordIn} is not a palindrome`;
+  }
+
+  return `${wordIn} is a palindrome`;
 }
 
-function msToDays(ms) {
-  return ms / 86400000;
-}
-
-const birthday = "April 29 1999";
-const daysOld = numberOfDaysOld(birthday);
-const yearsOld = calcYearsOld(birthday);
-
-console.log(`You are ${daysOld.toFixed(0)} days old`);
-console.log(`You are ${yearsOld.toFixed(0)} years old`);
+console.log(countVowels(longWord));
+console.log(palindrome(shortWord));
+console.log(palindrome(palWord));
