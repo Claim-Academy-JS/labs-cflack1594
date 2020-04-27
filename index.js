@@ -18,7 +18,7 @@ function palindrome(wordIn) {
   wordIn = wordIn.toLowerCase();
 
   for (let i = 0; i < wordIn.length; i++) {
-    if (!(wordIn.charAt(i) === wordIn.charAt(wordIn.length - 1 - i)))
+    if (!(wordIn.charAt(i) === wordIn.charAt(wordIn.length - 1) - i))
       return `${wordIn} is not a palindrome`;
   }
 
